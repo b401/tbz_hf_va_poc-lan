@@ -1,0 +1,59 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e9ecef;
+}
+
+#dragon {
+    height: 90%;
+}
+
+h1 {
+    margin-top: 0.2em;
+    margin-left: 0.5em;
+    display: inline;
+}
+
+.port {
+    white-space:pre-wrap;
+}
+
+.dropdown {
+    display:inline;
+    vertical-align: super;
+}
+
+#he {
+    text-decoration:none;
+    color: black;
+}
+
+#header {
+    width: 100%;
+    padding-top: 0.5em;
+    height:3.5em;
+    background-color: #fff;
+}
+
+
+span#footspan{
+    text-align: center;
+    display: block;
+}
+
+
+footer {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#title {
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.jumbotron {
+    margin-bottom: 0.5rem !important;
+}
+

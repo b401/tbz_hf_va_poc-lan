@@ -1,0 +1,30 @@
+---
+# file: site.yml
+- name: Build vms
+  hosts: localhost
+  roles:
+    - deploy-vsphere-template
+    
+
+- name: nidhogg
+  hosts: nidhogg
+  vars_files: "secrets/ansible_sudo"
+  become: true
+  module_defaults:
+    apt:
+      force_apt_get: yes    
+  roles:    
+    - common        
+    - nidhogg
+
+- name: nginx
+  hosts: nginx
+  vars_files: "secrets/ansible_sudo"
+  become: true
+  module_defaults:
+    apt:
+      force_apt_get: yes    
+  roles:    
+    - common        
+    - nginxinc.nginx
+  

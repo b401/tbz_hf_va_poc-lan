@@ -1,0 +1,30 @@
+portspecs:
+  - name: nidhogg
+    ports:
+      - id: 22
+        state: open
+      - id: 8080
+        state: open
+
+  - name: nginx
+    ports:
+      - id: 22
+        state: open
+      - id: 80
+        state: open
+
+  - name: prtg
+    ports:
+      - id: 22
+        state: closed
+      - id: 80
+        state: open
+
+  - name: splunk
+    ports:
+      - id: 8000
+        state: open
+      - id: 22
+        state: open
+      - id: 8089
+        state: open

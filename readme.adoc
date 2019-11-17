@@ -1,0 +1,18 @@
+= POC LAN
+
+== Info
+
+POC Lan used in https://github.com/b401/nidhogg[nidhogg].
+
+== Requirements
+
+- Terraform
+- Ansible
+- ESXi + vsphere
+
+
+== Run
+
+```
+ansible-playbook va.yml --ask-vault-pass
+```

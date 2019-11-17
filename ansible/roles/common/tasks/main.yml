@@ -1,0 +1,4 @@
+- name: include add_user.yml
+  include_tasks: add_user.yml
+- name: include add_keys.yml
+  include_tasks: add_keys.yml

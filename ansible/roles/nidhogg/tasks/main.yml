@@ -1,0 +1,55 @@
+- name: Install dependencies
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  with_items:
+    - libpcap-dev
+    - nmap
+
+- name: softlink libpcap
+  file:
+    src: /usr/lib/x86_64-linux-gnu/libpcap.so
+    dest: /usr/lib/x86_64-linux-gnu/libpcap.so.1 
+    state: link
+
+- name: Create nidhogg dir
+  file:
+    path: /etc/nidhogg
+    state: directory
+
+- name: copy static files
+  copy:
+    src: static
+    dest: /etc/nidhogg
+
+- name: copy templates
+  copy:
+    src: templates
+    dest: /etc/nidhogg
+
+- name: copy configuration
+  copy:
+    src: config.yml
+    dest: /etc/nidhogg/config.yml
+
+- name: Copy nidhogg
+  copy:
+    src: nidhogg
+    dest: /usr/bin/nidhogg
+
+- name: Copy Portspec    
+  copy:
+    src: portspecs.yml
+    dest: /etc/nidhogg/portspecs.yml
+
+- name: Copy mappings
+  copy:
+    src: mappings.xml
+    dest: /etc/nidhogg/mappings.xml
+
+- name: make it executable
+  shell: chmod +x /usr/bin/nidhogg
+
+- name: start nidhogg
+  shell: /bin/bash -c /usr/bin/nidhogg &

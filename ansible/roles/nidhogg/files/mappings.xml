@@ -1,0 +1,33 @@
+{ "mappings":
+    [
+        {
+            "hostname": "nidhogg",
+            "id": "i-0",
+            "ips": ["10.0.0.200"],
+            "name": "nidhogg",
+            "portspec": "nidhogg"
+        },
+        {
+            "hostname": "nginx",
+            "id": "i-1",
+            "ips": ["10.0.0.201"],
+            "name": "nginx",
+            "portspec": "nginx"
+        },
+        {
+            "hostname": "prtg",
+            "id": "i-2",
+            "ips": ["10.0.0.38"],
+            "name": "prtg",
+            "portspec": "prtg"
+        },
+        {
+            "hostname": "splunk",
+            "id": "i-3",
+            "ips": ["10.0.0.36"],
+            "name": "splunk",
+            "portspec": "splunk"
+        }
+        
+    ]
+}

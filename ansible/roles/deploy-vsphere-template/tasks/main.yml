@@ -1,0 +1,5 @@
+---
+- name: Call terraform
+  terraform:
+    project_path: "../terraform"
+    state: present
